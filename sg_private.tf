@@ -1,4 +1,6 @@
 module "private_main_sg" {
+  source  = "terraform-aws-modules/security-group/aws"
+  version = "3.18.0"
 
   name        = "private_sg"
   description = "Security group which is used for Private"
