@@ -1,6 +1,6 @@
 module "ec2_private" {
-  depends_on = [module.vpc]
-  source  = "terraform-aws-modules/ec2-instance/aws//examples/complete"
+  depends_on = [ module.vpc ]
+  source  = "terraform-aws-modules/ec2-instance/aws"
   version = "3.2.0"
 
   name = "${var.environment}-private_host"
