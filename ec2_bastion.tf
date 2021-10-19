@@ -4,7 +4,7 @@ module "ec2_public" {
 
   name = "${var.environment}-bastion_host"
 
-  datasource_ami         = data.aws_ami.ubuntu.id
+  ami                    = data.aws_ami.amzlinux2.id
   instance_type          = var.instance_type
   key_name               = var.instance_keypair
   subnet_id              = module.vpc.public_subnets[0]
