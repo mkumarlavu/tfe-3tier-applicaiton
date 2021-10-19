@@ -9,7 +9,7 @@ module "ec2_private" {
   instance_type          = var.instance_type
   key_name               = var.instance_keypair
   #monitoring             = true
-  vpc_security_group_ids = [module.private_sg.this_security_group_id]
+  vpc_security_group_ids = [module.private_main_sg.this_security_group_id]
   subnet_ids = [
     module.vpc.private_subnets[0],
     module.vpc.private_subnets[1]
