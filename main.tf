@@ -40,4 +40,7 @@ module "vpc" {
   database_subnet_tags = {
     Type = "Private Database Subnets"
   }
+
+  manage_default_route_table = true
+  default_route_table_tags   = { DefaultRouteTable = true }
 }
